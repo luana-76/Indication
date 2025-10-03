@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indication - inicio</title>
+    <link href="./inicial.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <header class="header">
+
+        <img width="100" height="100" src="https://img.icons8.com/bubbles/100/hand-cursor.png" alt="hand-cursor"/>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="" class="selecionado">Inicio</a></li>
+                <li><a href="../gameficação/gameficação.html">Gameficação</a></li>
+                <li><a href="">Perfil</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="principalInicio">
+
+            <div class="caixaLink">
+
+                <div class="link">https://www.indication.com/referral?user=joao_silva123</div>
+                <div class="text-box" id="copiar">
+                    <a href="#" class="btn btn-white btn-        animate">Copiar</a>
+                </div>
+
+            </div>
+
+            <section class="caixasResultados">
+
+                <div>
+                    <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/hand-cursor.png" alt="hand-cursor"/>
+                    <span>Indicou</span>
+                    <span class="valores"><b>200</b></span>
+                </div>
+                <div>
+                    <img width="48" height="48" src="https://img.icons8.com/fluency/48/total-sales-1.png" alt="total-sales-1"/>
+                    <span>Vendas</span>
+                    <span class="valores"><b>150</b></span>
+                </div>
+                <div>
+                    <img width="64" height="64" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-cashback-web-store-flaticons-lineal-color-flat-icons.png" alt="external-cashback-web-store-flaticons-lineal-color-flat-icons"/>
+                    <span>Cashback</span>
+                    <span class="valores"><b>R$50</b></span>
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+    <script>
+        let copiar = document.querySelector("#copiar");
+
+        copiar.addEventListener("click", () => {
+            alert("Link copiado!");
+        });
+    </script>
+
+    
+</body>
+</html>
