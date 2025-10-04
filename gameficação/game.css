@@ -1,79 +1,87 @@
 body{
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-
 }
 
 .header{
-
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .selecionado{
-
     background: #e4edba;
     padding: 15px;
     border-radius: 20px;
     font-weight: 600;
-
 }
 
 .selecionado:hover{
-
-     background: #abb483;
-
+    background: #abb483;
 }
 
 .header ul,
 ul li{
-
     list-style: none;
     display: inline-block;
     margin-left: 20px;
-
 }
 
 .header a{
-
     color: #000;
-
 }
 
-
 /* Parte principal */
-
 .rank{
-
     display: flex;
     justify-content: center;
     gap: 25px;
     margin-top: 20vh;
-
 }
+
 .rank div{
-
-
-    background: gray;
     background: #dddcdc;
     padding: 20px;
     border-radius: 30px;
     filter: drop-shadow(2px 4px 6px rgb(139, 139, 139));
-
 }
 
 .nivelRank{
-
-
     background: #9c9fb7;
     width: 40vw;
     border-radius: 20px;
     color: #f1f1f1;
     padding: 20px;
+    margin: 40px auto;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
 
+/* Nova seção de bônus */
+.bonusIndicacao{
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    width: 50vw;
+    border-radius: 20px;
+    color: #fff;
+    padding: 25px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.3);
+    animation: slideUp 1.5s ease forwards;
+    opacity: 0;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(60px); }
+    to { opacity: 1; transform: translateY(0); }
 }

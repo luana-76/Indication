@@ -1,54 +1,40 @@
 body{
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-
 }
 
 .header{
-
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .selecionado{
-
     background: #e4edba;
     padding: 15px;
     border-radius: 20px;
     font-weight: 600;
-
 }
 
 .selecionado:hover{
-
      background: #abb483;
-
 }
 
 .header ul,
 ul li{
-
     list-style: none;
     display: inline-block;
     margin-left: 20px;
-
 }
 
 .header a{
-
     color: #000;
-
 }
 
 /* Parte do conteudo */
-
 .principalInicio{
-
     margin: 10vh auto;
     background: #e8eaf7;
     width: 70vw;
@@ -59,29 +45,32 @@ ul li{
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Caixa link */
-
 .caixaLink{
-
     display: flex;
     gap: 20px;
     align-items: flex-start;
     margin-top: 25px;
-    width: 50%
-
+    width: 50%;
+    animation: slideIn 1.2s ease forwards;
+    opacity: 0;
 }
 
 .caixaLink .link{
-
     background: #97a759;
     width: 420px;
     padding: 10px;
     border-radius: 10px;
     color: #fff;
     cursor: pointer;
+    transition: transform .3s, box-shadow .3s;
+}
+.caixaLink .link:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
 /* botão de copiar */
@@ -97,8 +86,8 @@ ul li{
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .btn:active {
@@ -134,34 +123,19 @@ ul li{
 }
 
 .btn-animated {
-    animation: moveInBottom 5s ease-out;
+    animation: moveInBottom 1.5s ease-out;
     animation-fill-mode: backwards;
 }
 
-@keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
 /* Seção de resultados */
-
 .caixasResultados{
-
     display: flex;
     width: 100%;
     justify-content: center;
     gap: 30px;
-
 }
-.caixasResultados div{
 
+.caixasResultados div{
     background: #758349;
     display: flex;
     flex-direction: column;
@@ -173,10 +147,37 @@ ul li{
     color: #fff;
     gap: 15px;
     width: 20%;
-
+    animation: bounceIn 1.2s ease;
+    transition: transform .3s ease, box-shadow .3s ease;
 }
+
+.caixasResultados div:hover{
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
 .valores{
-
     font-size: 1.5em;
+}
 
+/* ===== Animações ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-80px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+@keyframes moveInBottom {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0px); }
 }
